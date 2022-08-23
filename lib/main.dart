@@ -1,5 +1,10 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'common/index.dart';
+
+void main(List<String> args) {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -12,7 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: "/",
+      getPages: PageRoutes.list,
     );
   }
 }
