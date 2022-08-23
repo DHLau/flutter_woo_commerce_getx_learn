@@ -17,6 +17,12 @@ class LoginPage extends GetView<LoginController> {
             controller.handleTap(12);
           },
           child: const Text('change'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Get.toNamed("/spalsh");
+          },
+          child: const Text('跳转 splash'),
         )
       ],
     );
