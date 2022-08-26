@@ -1,3 +1,4 @@
+import 'package:flutter_woo_commerce_getx_learn/common/routers/names.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'common/index.dart';
@@ -17,8 +18,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
-      getPages: PageRoutes.list,
+      initialRoute: RouteNames.systemSplash,
+      getPages: RoutePages.list,
+      navigatorObservers: [RoutePages.observer],
     );
   }
 }

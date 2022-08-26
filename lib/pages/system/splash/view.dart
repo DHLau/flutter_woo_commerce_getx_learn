@@ -8,24 +8,8 @@ class SplashPage extends GetView<SplashController> {
 
   // 主视图
   Widget _buildView() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          GetBuilder<SplashController>(
-            id: "splash_title",
-            builder: (_) {
-              return Text(_.title);
-            },
-          ),
-          ElevatedButton(
-            onPressed: () {
-              controller.onTap(DateTime.now().microsecondsSinceEpoch);
-            },
-            child: const Text('立刻点击'),
-          )
-        ],
-      ),
+    return const Center(
+      child: Text("SplashPage"),
     );
   }
 

@@ -3,16 +3,11 @@ import 'package:get/get.dart';
 class SplashController extends GetxController {
   SplashController();
 
-  String title = "";
-
   _initData() {
     update(["splash"]);
   }
 
-  void onTap(int ticket) {
-    title = "GetBuilder -> 点击了第$ticket次 按钮";
-    update(["splash_title"]);
-  }
+  void onTap() {}
 
   // @override
   // void onInit() {
