@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'index.dart';
 
 class StylesIndexPage extends GetView<StylesIndexController> {
@@ -8,8 +8,23 @@ class StylesIndexPage extends GetView<StylesIndexController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("StylesIndexPage"),
+    return Column(
+      children: [
+        ListTile(
+          onTap: () {
+            controller.onLanguageSelected();
+          },
+          title: Text(
+            "语言: ${ConfigService.to.locale.toLanguageTag()}",
+          ),
+        ),
+        ListTile(
+          onTap: controller.onThemeSelected,
+          title: Text(
+            "主题：${ConfigService.to.isDarkMode ? "Dark" : "Light"} ",
+          ),
+        )
+      ],
     );
   }
 
@@ -20,7 +35,10 @@ class StylesIndexPage extends GetView<StylesIndexController> {
       id: "styles_index",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("styles_index")),
+          // appBar: AppBar(title: const Text("styles_index")),
+          appBar: AppBar(
+            title: Text(LocaleKeys.stylesTitle.tr),
+          ),
           body: SafeArea(
             child: _buildView(),
           ),
