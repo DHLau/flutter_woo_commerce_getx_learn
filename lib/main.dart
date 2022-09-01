@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_woo_commerce_getx_learn/common/routers/names.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
