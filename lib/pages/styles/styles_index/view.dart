@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_woo_commerce_getx_learn/common/routers/names.dart';
 import 'package:get/get.dart';
 import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'index.dart';
@@ -23,6 +24,12 @@ class StylesIndexPage extends GetView<StylesIndexController> {
           title: Text(
             "主题：${ConfigService.to.isDarkMode ? "Dark" : "Light"} ",
           ),
+        ),
+        ListTile(
+          onTap: () {
+            Get.toNamed(RouteNames.stylesText);
+          },
+          title: const Text('Text 文本'),
         )
       ],
     );
