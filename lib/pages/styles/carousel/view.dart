@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'index.dart';
 
-class CarouselPage extends GetView<CarouselController> {
+class CarouselPage extends GetView<DHCarouselController> {
   const CarouselPage({Key? key}) : super(key: key);
 
   // 主视图
@@ -15,8 +15,8 @@ class CarouselPage extends GetView<CarouselController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CarouselController>(
-      init: CarouselController(),
+    return GetBuilder<DHCarouselController>(
+      init: DHCarouselController(),
       id: "carousel",
       builder: (_) {
         return Scaffold(

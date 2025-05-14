@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class CarouselController extends GetxController {
-  CarouselController();
+class DHCarouselController extends GetxController {
+  DHCarouselController();
 
   _initData() {
     update(["carousel"]);

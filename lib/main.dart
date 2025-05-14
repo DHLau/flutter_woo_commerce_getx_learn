@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ConfigService.to.isDarkMode ? AppTheme.dark : AppTheme.light,
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteNames.stylesStylesIndex,
+      initialRoute: RouteNames.systemRegister,
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observer],
       translations: Translation(),
